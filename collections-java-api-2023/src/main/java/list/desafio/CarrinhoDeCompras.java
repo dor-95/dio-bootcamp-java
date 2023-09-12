@@ -4,35 +4,53 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarrinhoDeCompras {
-    private List<Item> itens;
+    private List<Item> itensList;
 
     public CarrinhoDeCompras() {
-        this.itens = new ArrayList<>();
+        this.itensList = new ArrayList<>();
     }
 
     public void adicionarItem(String nome, double preco, int quantidade) {
-        itens.add(new Item(nome, preco, quantidade));
+        itensList.add(new Item(nome, preco, quantidade));
     }
 
     public void removerItem(String nome) {
+
+        if (listIsEmpty()) return;
+
         List<Item> removerItens = new ArrayList<>();
-        itens.forEach(item -> {
+        itensList.forEach(item -> {
             if (item.getNome().equalsIgnoreCase(nome)) {
                 removerItens.add(item);
             }
         });
-        itens.removeAll(removerItens);
+        itensList.removeAll(removerItens);
     }
 
-    public void calcularValorTotal() {
+    public double calcularValorTotal() {
+
+        if (itensList.isEmpty()) throw new RuntimeException("A lista está vazia!");
+
         double valorTotal = 0;
-        for (Item item : itens) {
+        for (Item item : itensList) {
             valorTotal += item.getPreco() * item.getQuantidade();
         }
-        System.out.println("Valor total do carrinho: " + valorTotal);
+        return valorTotal;
     }
 
     public void exibirItens() {
-        itens.forEach(System.out::println);
+        if (listIsEmpty()) return;
+
+        System.out.println("#########CarrinhoDeCompras");
+        itensList.forEach(System.out::println);
+        System.out.println("#########-----------------");
+    }
+
+    private boolean listIsEmpty() {
+        if (itensList.isEmpty()) {
+            System.out.println("A lista está vazia!");
+            return true;
+        }
+        return false;
     }
 }
