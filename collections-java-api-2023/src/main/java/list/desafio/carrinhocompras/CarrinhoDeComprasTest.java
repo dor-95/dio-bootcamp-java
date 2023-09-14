@@ -1,4 +1,4 @@
-package main.java.list.desafio;
+package main.java.list.desafio.carrinhocompras;
 
 public class CarrinhoDeComprasTest {
     public static void main(String[] args) {
