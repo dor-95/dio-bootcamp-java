@@ -1,4 +1,4 @@
-package main.java.map.desafio.listatarefas;
+package main.java.set.desafio.listatarefas;
 
 public class ListaTarefasTest {
     public static void main(String[] args) {

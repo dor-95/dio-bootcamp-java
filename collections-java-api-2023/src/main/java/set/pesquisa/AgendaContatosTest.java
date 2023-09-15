@@ -1,6 +1,4 @@
-package main.java.map.pesquisa;
-
-import java.util.Set;
+package main.java.set.pesquisa;
 
 public class AgendaContatosTest {
     public static void main(String[] args) {

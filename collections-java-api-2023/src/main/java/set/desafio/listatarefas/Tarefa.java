@@ -1,4 +1,4 @@
-package main.java.map.desafio.listatarefas;
+package main.java.set.desafio.listatarefas;
 
 import java.util.Objects;
 

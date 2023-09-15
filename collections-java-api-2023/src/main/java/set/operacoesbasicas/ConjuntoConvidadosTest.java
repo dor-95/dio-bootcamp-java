@@ -1,6 +1,4 @@
-package main.java.map.operacoesbasicas;
-
-import java.util.Random;
+package main.java.set.operacoesbasicas;
 
 public class ConjuntoConvidadosTest {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main.java.map.desafio.palavrasunicas;
+package main.java.set.desafio.palavrasunicas;
 
 import java.util.HashSet;
 import java.util.Set;

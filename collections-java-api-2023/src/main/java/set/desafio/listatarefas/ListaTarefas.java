@@ -1,4 +1,4 @@
-package main.java.map.desafio.listatarefas;
+package main.java.set.desafio.listatarefas;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -88,7 +88,7 @@ public class ListaTarefas {
 
     public boolean listNotContainsTarefa(String descricao) {
         if (!tarefaSet.contains(new Tarefa(descricao))) {
-            System.out.println("Tarefa não encontrada na lista.");
+            System.out.println("Tarefa não encontrada no conjunto.");
             return true;
         }
         return false;

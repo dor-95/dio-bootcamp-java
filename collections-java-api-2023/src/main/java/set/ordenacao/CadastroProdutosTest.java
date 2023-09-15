@@ -1,6 +1,4 @@
-package main.java.map.ordenacao;
-
-import java.util.Set;
+package main.java.set.ordenacao;
 
 public class CadastroProdutosTest {
     public static void main(String[] args) {
