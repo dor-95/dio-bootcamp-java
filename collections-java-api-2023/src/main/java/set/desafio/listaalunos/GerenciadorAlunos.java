@@ -12,11 +12,11 @@ public class GerenciadorAlunos {
         this.alunoSet = new HashSet<>();
     }
 
-    public void adicionarAluno(long matricula, String nome, double media) {
+    public void adicionarAluno(Long matricula, String nome, double media) {
         alunoSet.add(new Aluno(matricula, nome, media));
     }
 
-    public void removerAluno(long matricula) {
+    public void removerAluno(Long matricula) {
         alunoSet.removeIf(aluno -> aluno.getMatricula().compareTo(matricula) == 0);
     }
 

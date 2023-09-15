@@ -3,7 +3,7 @@ package main.java.set.desafio.listaalunos;
 import java.util.Objects;
 
 public class Aluno implements Comparable<Aluno> {
-    private long matricula;
+    private Long matricula;
     private String nome;
     private double media;
 
@@ -15,7 +15,7 @@ public class Aluno implements Comparable<Aluno> {
 
     @Override
     public int compareTo(Aluno a) {
-        return this.getNome().compareToIgnoreCase(a.nome);
+        return this.nome.compareToIgnoreCase(a.getNome());
     }
 
     public Long getMatricula() {
