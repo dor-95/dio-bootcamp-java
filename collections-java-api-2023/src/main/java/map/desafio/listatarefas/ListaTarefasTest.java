@@ -34,6 +34,8 @@ public class ListaTarefasTest {
 
         System.out.println("##------------------------------------------------");
         tarefas.marcarTarefaPendente("Tarefa 6");
+        tarefas.marcarTarefaPendente("Tarefa 7");
+        tarefas.marcarTarefaConcluida("Tarefa 8");
         System.out.println("Tarefas pendentes: " + tarefas.obterTarefasPendentes());
 
         System.out.println("##------------------------------------------------");

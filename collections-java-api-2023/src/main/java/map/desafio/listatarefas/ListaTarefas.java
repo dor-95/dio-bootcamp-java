@@ -12,7 +12,7 @@ public class ListaTarefas {
     }
 
     public void adicionarTarefa(String descricao) {
-        this.tarefaSet.add(new Tarefa(descricao, false));
+        this.tarefaSet.add(new Tarefa(descricao));
     }
 
     public void removerTarefa(String descricao) {
@@ -43,7 +43,7 @@ public class ListaTarefas {
         return obterTarefas(tarefa -> !tarefa.isConcluida());
     }
 
-    public Set<Tarefa> obterTarefas(Predicate<Tarefa> predicate) {
+    private Set<Tarefa> obterTarefas(Predicate<Tarefa> predicate) {
         Set<Tarefa> tarefas = new HashSet<>();
         for (Tarefa tarefa : tarefaSet) {
             if (predicate.test(tarefa)) {
@@ -54,7 +54,7 @@ public class ListaTarefas {
     }
 
     public void marcarTarefaConcluida(String descricao) {
-        if (listIsEmpty()) return;
+        if (listNotContainsTarefa(descricao)) return;
 
         tarefaSet.forEach(tarefa -> {
             if (tarefa.getDescricao().equalsIgnoreCase(descricao)) {
@@ -64,7 +64,7 @@ public class ListaTarefas {
     }
 
     public void marcarTarefaPendente(String descricao) {
-        if (listIsEmpty()) return;
+        if (listNotContainsTarefa(descricao)) return;
 
         tarefaSet.forEach(tarefa -> {
             if (tarefa.getDescricao().equalsIgnoreCase(descricao)) {
@@ -80,7 +80,15 @@ public class ListaTarefas {
 
     public boolean listIsEmpty() {
         if (tarefaSet.isEmpty()) {
-            System.out.println("A lista está vazia!");
+            System.out.println("O conjunto está vazio!");
+            return true;
+        }
+        return false;
+    }
+
+    public boolean listNotContainsTarefa(String descricao) {
+        if (!tarefaSet.contains(new Tarefa(descricao))) {
+            System.out.println("Tarefa não encontrada na lista.");
             return true;
         }
         return false;
