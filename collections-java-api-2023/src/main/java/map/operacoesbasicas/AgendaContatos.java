@@ -26,7 +26,6 @@ public class AgendaContatos {
     }
 
     public Optional<Integer> pesquisarPorNome(String nome) {
-        Integer numeroPorNome = null;
         if (!agendaContatos.isEmpty() && agendaContatos.containsKey(nome)) {
             return Optional.of(agendaContatos.get(nome));
         }
