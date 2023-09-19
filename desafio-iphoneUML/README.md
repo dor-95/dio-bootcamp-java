@@ -15,4 +15,4 @@ Aparelho Telefônico e Navegador na Internet. Em seguida crie as classes e inter
 
 ##### Modelagem UML - iPhone
 
-![](C:\Users\ReD_N\OneDrive\Documentos\Cursos_Programacao\DIO\dio-bootcamp-java\desafio-iphoneUML\iPhone.drawio.svg)
+![](https://github.com/dor-95/dio-bootcamp-java/blob/main/desafio-iphoneUML/iPhone.drawio.svg)
